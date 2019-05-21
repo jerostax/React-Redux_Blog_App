@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Depedencies
 
-Added redux / react-redux / axios / redux-thunk
+Added redux / react-redux / axios / redux-thunk / lodash
 
 ## Available Scripts
 
