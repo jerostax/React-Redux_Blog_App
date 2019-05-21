@@ -11,8 +11,15 @@ export const fetchPostsAndUsers = () => async (dispatch, getState) => {
   // Map all over our different posts and pull out the 'userId' --- _.uniq find the uniq user id's (return an array)
   const userIds = _.uniq(_.map(getState().posts, 'userId'));
   console.log(userIds);
-
   userIds.forEach(id => dispatch(fetchUser(id)));
+
+// Optional REFACTO of the code above :
+
+  // _.chain(getState().posts)
+  //   .map('userId')
+  //   .uniq()
+  //   .forEach(id => dispatch(fetchUser(id)))
+  //   .value()
 };
 // ----- END SOLUTION 2 PART 1 -----
 
